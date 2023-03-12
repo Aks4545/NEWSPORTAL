@@ -1,0 +1,22 @@
+<section id="gallery">
+  <div class="container">
+<h1 class="text-center mt-3 txt">Tamil News</h1>
+<hr class="bg-dark ">
+    <div class="row">
+    <div class="col-lg-4 mb-4"  *ngFor="let x of tamil">
+    <div class="card">
+      <a (click)="gotohere('tamil',x.head)">
+      <img src="{{x.image}}" alt="" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">{{x.head}}</h5>
+        <p class="card-text">{{x.head1}}</p>
+
+      </div>
+</a>
+     </div>
+    </div>
+
+
+  </div>
+</div>
+</section>
