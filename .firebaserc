@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "news-portal-256b6": {
+      "hosting": {
+        "NEWSPORTAL": [
+          "news-portal-256b6"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "news-portal-256b6"
+  }
+}

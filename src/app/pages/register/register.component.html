@@ -1,1 +1,75 @@
-<p>register works!</p>
+
+
+<div class="section login-page container-fluid">
+  <div class="row aligh-item-center">
+
+
+
+    <div class="col-sm-8">
+      <div class="login-extra">
+        <img src="../assets/images/svg1.jpg" alt="" style="width: 1400px; height: 730px;">
+      </div>
+    </div>
+
+  <div class="col-sm-4 p-0">
+      <div class="login-form mr-2 mb-4">
+        <div class="logo">
+          <a href="index.html" class="">
+            <img src="https://demo.htmlcodex.com/456/news-website-templates/img/logo.png" alt="">
+          </a>
+        </div>
+        <div class="page-heading">
+          <h2>Login into your account</h2>
+        </div>
+        <form action="">
+          <div class="login-form-items">
+            <div class="items">
+              <label for="">Email</label>
+              <div class="input">
+                <input type="text" placeholder="Enter your password" name="email"  [(ngModel)]="email">
+                <i class="ri-lock-line"></i>
+              </div>
+            </div>
+            <div class="items">
+              <label for="">Password</label>
+              <div class="input">
+                <input type="text" placeholder="Enter your password" name="password" [(ngModel)]="password">
+                <i class="ri-lock-line"></i>
+              </div>
+            </div>
+          <div class="items">
+            <label for="">Name</label>
+            <div class="input">
+              <input type="text" placeholder="Email Address" name="username" [(ngModel)]="username">
+              <i class="ri-mail-line"></i>
+            </div>
+          </div>
+          <div class="items">
+            <label for="">Phone</label>
+            <div class="input">
+              <input type="text" placeholder="Enter your password" name="phone" [(ngModel)]="phone">
+              <i class="ri-lock-line"></i>
+            </div>
+          </div>
+          <div class="text-end forgot-password">
+           Already have an accounf <a routerLink="login"></a>
+          </div>
+          <div class="form-signin">
+            <button class="btn"  (click)="registerUser()">Register  Now</button>
+          </div>
+          <div class="or-option">
+            <p>or</p>
+          </div>
+          <div class="form-signup">
+            <button class="btn" (click)="gotologin()">SignIn Now</button>
+          </div>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- https://svgshare.com/i/nDi.svg -->
+
+
+
