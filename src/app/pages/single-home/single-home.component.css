@@ -274,7 +274,6 @@
 
 .sidebar .category ul li span {
   display: inline-block;
-  float: right;
 }
 
 .sidebar .sidebar-widget .tags {
@@ -314,3 +313,7 @@
   -webkit-filter: blur(3px);
 }
 
+.font{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  font-weight: 100;
+  color: rgb(48, 41, 41);
+    }

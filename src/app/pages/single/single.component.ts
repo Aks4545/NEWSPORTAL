@@ -102,4 +102,19 @@ else if(lang==='single'){
   localStorage.setItem('head',head)
   this.router.navigate(['/singleHome'])
 }
+gotosp(){
+this.router.navigate(['/sports'])
+}
+gototech(){
+  this.router.navigate(['/tech'])
+  }
+gotoint(){
+    this.router.navigate(['/international'])
+}
+gotoent(){
+  this.router.navigate(['/entertainment'])
+}
+gotobus(){
+  this.router.navigate(['/business'])
+}
 }

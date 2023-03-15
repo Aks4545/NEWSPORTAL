@@ -8,14 +8,14 @@
                   </div>
                   <div class="sn-content">
                       <h1 class="sn-title">{{single[0].head}}</h1>
-                      <p>
+                      <p class="font">
                        {{single[0].news}}
                       </p>
 
-                      <p>
+                      <p class="font">
                        {{single[0].news1}}
                       </p>
-                       <p>
+                       <p class="font">
                        {{single[0].news2}}
                       </p>
                   </div>
@@ -60,11 +60,11 @@
                       <h2 class="sw-title">News Category</h2>
                       <div class="category">
                           <ul>
-                              <li><a routerlink="sports">Sports</a></li>
-                              <li><a href="">International</a></li>
-                              <li><a href="">Business</a></li>
-                              <li><a href="">Entertainment</a></li>
-                              <li><a href="">Technology</a></li>
+                              <li><a (click)="gotosp()">Sports</a></li>
+                              <li><a (click)="gotoint()">International</a></li>
+                              <li><a (click)="gotobus()">Business</a></li>
+                              <li><a (click)="gotoent()">Entertainment</a></li>
+                              <li><a (click)="gototech()">Technology</a></li>
                           </ul>
                       </div>
                   </div>

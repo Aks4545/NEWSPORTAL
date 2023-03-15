@@ -54,6 +54,22 @@ else if(lang==='home2'){
     this.router.navigate(['/single'])
   }
 
+  gotosp(){
+    this.router.navigate(['/sports'])
+    }
+    gototech(){
+      this.router.navigate(['/tech'])
+      }
+    gotoint(){
+        this.router.navigate(['/international'])
+    }
+    gotoent(){
+      this.router.navigate(['/entertainment'])
+    }
+    gotobus(){
+      this.router.navigate(['/business'])
+    }
+
 }
 
 
