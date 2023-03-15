@@ -80,54 +80,11 @@
   color: #FF6F61;
 }
 
-.single-news .sn-slider .slick-prev,
-.single-news .sn-slider .slick-next {
-  top: -62px;
-  width: 28px;
-  height: 28px;
-  z-index: 1;
-  transition: .5s;
-  color: #ffffff;
-  background: #000000;
-  border-radius: 4px;
-}
-
-.single-news .sn-slider .slick-prev {
-  left: calc(100% - 85px);
-}
-
-.single-news .sn-slider .slick-next {
-  right: 14px;
-}
-
-.single-news .sn-slider .slick-prev:hover,
-.single-news .sn-slider .slick-prev:focus,
-.single-news .sn-slider .slick-next:hover,
-.single-news .sn-slider .slick-next:focus {
-  color: #ffffff;
-  background: #FF6F61;
-}
-
-.single-news .sn-slider .slick-prev::before,
-.single-news .sn-slider .slick-next::before {
-  font-family: "Font Awesome 5 Free";
-  font-size: 18px;
-  font-weight: 900;
-  color: #ffffff;
-}
-
-.single-news .sn-slider .slick-prev::before {
-  content: "\f104";
-}
-
-.single-news .sn-slider .slick-next::before {
-  content: "\f105";
-}
 
 
-/**********************************/
-/*********** Sidebar CSS **********/
-/**********************************/
+
+
+
 .sidebar {
   position: relative;
   width: 100%;
