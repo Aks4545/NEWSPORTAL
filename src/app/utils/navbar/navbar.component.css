@@ -84,38 +84,6 @@
   max-height: 60px;
 }
 
-.top-header .search {
-  width: 100%;
-}
-
-.top-header .search input[type=text] {
-  width: 100%;
-  height: 40px;
-  padding: 0 15px;
-  color: #666666;
-  border: 1px solid #353535;
-}
-
-.top-header .search input[type=text]:focus {
-  border-color: #E47A2E;
-}
-
-.top-header .search button {
-  position: absolute;
-  width: 40px;
-  height: 38px;
-  top: 1px;
-  right: 16px;
-  padding: 0 15px;
-  border: none;
-  background: none;
-  color: #353535;
-}
-
-.top-header .search button:hover {
-  background: #E47A2E;
-  color: #ffffff;
-}
 
 .top-header .social {
   position: relative;

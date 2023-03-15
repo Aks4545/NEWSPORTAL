@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { NewsService } from 'src/app/news.service';
 @Component({
   selector: 'app-single',
@@ -7,13 +8,22 @@ import { NewsService } from 'src/app/news.service';
 })
 export class SingleComponent {
   single:any
-  constructor(private x:NewsService){}
+  home:any
+  home1:any
+sh:any
+  constructor(private x:NewsService,private router:Router){}
+
 
 
   ngOnInit(){
+      this.home=this.x.getHomeCard()
+  this.home1=this.x.getData()
+    this.sh=this.x.getsinglePage()
+
+
     let head:any=localStorage.getItem('head');
     let lang:any=localStorage.getItem('lang');
-
+    let sin:any=localStorage.getItem('sin')
 
     console.log(head);
     if(lang==='hindi')
@@ -71,10 +81,25 @@ else if(lang==='normal'){
   let ar=this.x.getData();
   this.single=ar.filter(e=>e.head===head);
 }
+else if(lang==='home1'){
+  let ar=this.x.getData();
+  this.single=ar.filter(e=>e.head===head);
+}
+else if(lang==='single'){
+  let ar=this.x.getsinglePage();
+  this.single=ar.filter(e=>e.head===head);
+}
     console.log(this.single[0]);
 
 
 
 
+}
+
+
+  gotosin(lang:any,head:any ){
+  localStorage.setItem('lang',lang)
+  localStorage.setItem('head',head)
+  this.router.navigate(['/singleHome'])
 }
 }

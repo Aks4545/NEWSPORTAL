@@ -11,12 +11,14 @@ export class HomeComponent {
 
   home:any
 car:any
+h1:any
   x: any;
     constructor(private  d: NewsService,private router:Router) {}
 
   ngOnInit(){
   this.home=this.d.getHomeCard()
   this.car=this.d.getData8()
+this.h1=this.d.geth1()
   }
 
     database= this.d.getData();
@@ -25,15 +27,28 @@ car:any
       localStorage.setItem('lang',lang)
       this.router.navigate(['/single'])
     }
-    gotoSingle(id:any){
+    gotoSingle(lang:any,id:any){
   localStorage.setItem('homeCardId',id)
+  localStorage.setItem('lang',lang)
+
   this.router.navigate(['\singleHome'])
   // localStorage.setItem('carouseldata',id)
   // this.router.navigate(['\single'])
     }
 
 
+gotocar(lang:any,head:any ){
+  localStorage.setItem('head',head)
+  localStorage.setItem('lang',lang)
+  this.router.navigate(['/singleHome'])
 
+}
+gotosinh(lang:any,head:any ){
+  localStorage.setItem('head',head)
+  localStorage.setItem('lang',lang)
+  this.router.navigate(['/singleHome'])
+
+}
 
   }
 

@@ -38,7 +38,7 @@
                   <a routerLink="home" class="nav-item nav-link ">Home</a>
                   <a routerLink="sports" class="nav-item nav-link">Sports</a>
                   <a routerLink="tech" class="nav-item nav-link">Tech</a>
-                  <a routerLink="business" class="nav-item nav-link">Business</a>
+                  <a routerLink="business" class="nav-item nav-link">Bussiness</a>
                   <a routerLink="entertainment" class="nav-item nav-link">Entertainment</a>
                   <a routerLink="international" class="nav-item nav-link">International</a>
 
@@ -54,7 +54,9 @@
 
                   <a routerLink="contact" class="nav-item nav-link">Contact Us</a>
 
-                  <a routerLink="login" class="nav-item nav-link">SignIn/SignUP</a>
+                  <a routerLink="login" class="nav-item nav-link" *ngIf="!auth.isLogged()">SignIn/SignUP</a>
+                  <a routerLink="" class="nav-item nav-link" (click)="logout()"  *ngIf="auth.isLogged()">Logout</a>
+
 
               </div>
           </div>

@@ -28,6 +28,7 @@ import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { FormsModule } from '@angular/forms';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
+import { SinglehComponent } from './pages/singleh/singleh.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { FIREBASE_OPTIONS } from '@angular/fire/compat';
     SingleHomeComponent,
     NavbarComponent,
     FooterComponent,
+    SinglehComponent,
 
   ],
   imports: [

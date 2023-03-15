@@ -1,4 +1,4 @@
-<h1 class="text-center mt-3">{{single[0].head}}</h1>
+<!-- <h1 class="text-center mt-3">{{single[0].head}}</h1>
 <div class="mt-3" >
   <h1 class="text-center mt-3">{{single[0].head1}}</h1>
 
@@ -14,3 +14,84 @@
 
     <p>{{single[0].news}}</p>
   </div>
+ -->
+
+ <div class="single-news">
+ <div class="container">
+     <div class="row">
+         <div class="col-lg-8">
+             <div class="sn-container">
+                 <div class="sn-img">
+                     <img src="{{single[0].image}}" style="height: 400px; width: 700px;"/>
+                 </div>
+                 <div class="sn-content">
+                     <h1 class="sn-title">{{single[0].head}}</h1>
+                     <p>
+                      {{single[0].news}}
+                     </p>
+
+                     <p>
+                      {{single[0].news1}}
+                     </p>
+                      <p>
+                      {{single[0].news2}}
+                     </p>
+                 </div>
+             </div>
+             <div class="sn-related">
+                 <h2>Related News</h2>
+                 <div class="row sn-slider ">
+                     <div class="col-md-4  mt-2" *ngFor="let x of home">
+                         <div class="sn-img">
+                             <img src="{{x.image}}" />
+                             <div class="sn-title">
+                                 <a >{{x.head}}</a>
+                             </div>
+                         </div>
+                     </div>
+
+                 </div>
+             </div>
+         </div>
+
+         <div class="col-lg-4">
+             <div class="sidebar">
+                 <div class="sidebar-widget">
+                     <h2 class="sw-title">In This Category</h2>
+                     <div class="news-list">
+
+                         <div class="nl-item" *ngFor="let y of sp">
+                             <div class="nl-img">
+                                 <img src="{{y.image}}" />
+                             </div>
+                             <div class="nl-title">
+                                 <a (click)="gotosin('home1',y.head)">{{y.head}}</a>
+                             </div>
+                         </div>
+
+                     </div>
+                 </div>
+
+
+
+                 <div class="sidebar-widget">
+                     <h2 class="sw-title">News Category</h2>
+                     <div class="category">
+                         <ul>
+                             <li><a routerlink="sports">Sports</a></li>
+                             <li><a href="">International</a></li>
+                             <li><a href="">Business</a></li>
+                             <li><a href="">Entertainment</a></li>
+                             <li><a href="">Technology</a></li>
+                         </ul>
+                     </div>
+                 </div>
+
+
+             </div>
+         </div>
+     </div>
+ </div>
+</div>
+<!-- Single News End-->
+

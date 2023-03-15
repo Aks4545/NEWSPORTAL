@@ -3,10 +3,12 @@
 <div class="ticker-wrap mt-1">
   <div class="ticker-heading">Breaking News</div>
 <div class="ticker">
-  <div class="ticker__item">Letterpress chambray brunch.</div>
-  <div class="ticker__item">Vice mlkshk crucifix beard chillwave meditation hoodie asymmetrical Helvetica.</div>
-  <div class="ticker__item">Ugh PBR&B kale chips Echo Park.</div>
-  <div class="ticker__item">Gluten-free mumblecore chambray mixtape food truck. </div>
+  <div class="ticker__item"> WPL 2023: 'Jess Jonassen And Marizanne Kapp Have Nerves of Steel'</div>
+  <div class="ticker__item">Pakistan interior minister says Imran Khan will be arrested tonight; PTI workers stage protests, block highways</div>
+  <div class="ticker__item">Facebook-parent Meta to lay off 10,000 employees in second round of job cuts</div>
+  <div class="ticker__item">Same-sex marriage: Oppn parties cautious, want SC to take the lead as it did on Section 377. </div>
+  <div class="ticker__item">Wins at Oscars 2023 showcase depth of diversity and inclusion in the country</div>
+
 </div>
 </div>
 
@@ -19,13 +21,13 @@
 <div class="top-news">
   <div class="container-fluid">
       <div class="row">
-          <div class="col-md-6 tn-left ">
+          <div class="col-md-6 tn-left " *ngFor="let h of h1">
               <div class="tn-img">
-                  <img src="assets/images/fp1.jpg" style="height: 470px;"/>
+                  <img src="{{h.image}}" style="height: 500px;"/>
                   <div class="tn-content">
                       <div class="tn-content-inner">
-                          <a class="tn-date" href=""><i class="far fa-clock"></i>05-Feb-2020</a>
-                          <a class="tn-title" routerLink="">Russia’s TMH bids lowest for making 200 Vande Bharat trains in India</a>
+                          <a class="tn-date" ><i class="far fa-clock"></i>{{h.date}}</a>
+                          <a class="tn-title" (click)="gotosinh('home2',h.head)">{{h.head}}</a>
                       </div>
                   </div>
               </div>
@@ -38,7 +40,8 @@
                           <div class="tn-content">
                               <div class="tn-content-inner">
                                   <a class="tn-date" ><i class="far fa-clock"></i>{{h.date}}</a>
-                                  <a class="tn-title" (click)="gotoSingle(h.id)">{{h.head}}</a>
+                                  <a class="tn-title" (click)="gotoSingle('single',h.id)">{{h.head}}</a>
+
                               </div>
                           </div>
                       </div>
@@ -56,17 +59,7 @@
 
 
 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active" *ngFor="let h of car">
-      <img src="{{h.image}}" class="d-block w-100" alt="..." style="height: 500px;">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>{{h.head}}</h5>
-        <p>{{h.head1}}</p>
-      </div>
 
-    </div>
-
-  </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
@@ -75,27 +68,45 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active" *ngFor="let h of car">
+      <img src="{{h.image}}" class="d-block w-100" alt="..." style="height: 500px;" >
+      <div class="carousel-caption d-none d-md-block">
+        <h5  (click)="gotocar('car',h.head)">{{h.head}}</h5>
+        <p>{{h.head1}}</p>
+      </div>
+
+    </div>
+
+  </div>
+
 </div>
 
 
 
 <h2 class="hr-lines"> Top News </h2>
 
-
-
-
-<div class="container-fluid">
-
   <div class="row mb-5">
-    <div class="col-md-3"  *ngFor="let x of database">
-      <div class="card">
-        <img src="{{x.image}}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">{{x.head}}</h5>
-          <p class="card-text text-muted">{{x.description}}</p>
-          <a (click)="gotohere('normal',x.head)" class="btn btn-sm btn-primary">Read more</a>
-        </div>
-      </div>
-    </div>
+    <div class="col-md-3"  *ngFor="let a of database">
+<a (click)="gotohere('normal',a.head)">
+  <figure class="snip1493">
+    <div class="image"><img src="{{a.image}}" alt="ls-sample1" /></div>
+    <figcaption>
+      <div class="date"><span class="day">28</span><span class="month">Mar</span></div>
+      <h3 >{{a.head}}</h3>
+      <p>
 
-  </div>
+        {{a.description}}
+      </p>
+
+      <footer>
+        <div class="views"><i class="ion-eye"></i>2,907</div>
+        <div class="love"><i class="ion-heart"></i>623</div>
+        <div class="comments"><i class="ion-chatboxes"></i>23</div>
+      </footer>
+    </figcaption>
+  </figure>
+</a>
+</div></div>
+
