@@ -1,19 +1,22 @@
-<section id="gallery">
-  <div class="container">
-    <h1 class="text-center mt-3 "><span> Entertainment News</span></h1>
-    <div class="row">
-    <div class="col-lg-4 mb-4" *ngFor="let x of entertainment">
-    <div class="card">
-      <a (click)="gotohere('entertainment',x.head)">
-      <img src="{{x.image}}" alt="" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">{{x.head}}</h5>
-        <p class="card-text">{{x.head1}}</p>
 
+<h1 class="text-center mt-3 txt"><span>International News</span> </h1>
+
+<div class="content-wrapper">
+  <div class="row">
+    <div class="col-lg-4 mb-4"  *ngFor="let x of entertainment">
+
+  <div class="news-card">
+    <img src="{{x.image}}" alt="" class="news-card__image">
+    <div class="news-card__text-wrapper">
+      <h4 class="news-card__title">{{x.head}}</h4>
+      <div class="news-card__post-date">mar 29, 2023</div>
+      <div class="news-card__details-wrapper">
+        <p class="news-card__excerpt">{{x.head1}}&hellip;</p>
+        <a (click)="gotohere('entertainment',x.head)"  class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
       </div>
-</a>
-     </div>
     </div>
+  </div>
+
 </div>
+  </div>
 </div>
-</section>
