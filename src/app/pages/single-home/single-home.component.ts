@@ -11,14 +11,15 @@ home:any
 home1:any
 sp:any
 cr:any
-
+rel:any
   single:any
   constructor(private h:NewsService,private router:Router){}
   ngOnInit(){
     this.home=this.h.getHomeCard()
 this.home1=this.h.getData()
 this.sp=this.h.getsingleHome()
-this.cr=this.h.getData8()
+this.cr=this.h.getData8
+this.rel=this.h.getsinglerel1()
 
 
 let head:any=localStorage.getItem('head');
@@ -43,12 +44,20 @@ else if(lang==='home2'){
   this.single=this.h.geth1().filter(data=>data.head===head)
 
 }
+else if(lang==='rel1'){
+  this.single=this.h.getsinglerel2().filter(data=>data.head===head)
 
+}
 
 
     console.log(this.single[0]);
   }
   gotosin(lang:any,head:any ){
+    localStorage.setItem('lang',lang)
+    localStorage.setItem('head',head)
+    this.router.navigate(['/single'])
+  }
+  gotorel(lang:any,head:any ){
     localStorage.setItem('lang',lang)
     localStorage.setItem('head',head)
     this.router.navigate(['/single'])

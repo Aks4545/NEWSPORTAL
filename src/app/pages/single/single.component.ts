@@ -11,14 +11,15 @@ export class SingleComponent {
   home:any
   home1:any
 sh:any
+rel2:any
   constructor(private x:NewsService,private router:Router){}
 
 
 
   ngOnInit(){
       this.home=this.x.getHomeCard()
-  this.home1=this.x.getData()
     this.sh=this.x.getsinglePage()
+this.rel2=this.x.getsinglerel2()
 
 
     let head:any=localStorage.getItem('head');
@@ -89,6 +90,10 @@ else if(lang==='single'){
   let ar=this.x.getsinglePage();
   this.single=ar.filter(e=>e.head===head);
 }
+else if(lang==='rel2'){
+  let ar=this.x.getsinglerel1();
+  this.single=ar.filter(e=>e.head===head);
+}
     console.log(this.single[0]);
 
 
@@ -102,6 +107,14 @@ else if(lang==='single'){
   localStorage.setItem('head',head)
   this.router.navigate(['/singleHome'])
 }
+
+gotorel(lang:any,head:any ){
+  localStorage.setItem('lang',lang)
+  localStorage.setItem('head',head)
+  this.router.navigate(['/singleHome'])
+
+}
+
 gotosp(){
 this.router.navigate(['/sports'])
 }

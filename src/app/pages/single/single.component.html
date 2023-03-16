@@ -1,6 +1,6 @@
 <div class="single-news">
-  <div class="container">
-      <div class="row">
+  <div class="container ">
+      <div class="row lg-12 md-6 sm-3">
           <div class="col-lg-8">
               <div class="sn-container">
                   <div class="sn-img">
@@ -23,11 +23,11 @@
               <div class="sn-related">
                   <h2>Related News</h2>
                   <div class="row sn-slider ">
-                      <div class="col-md-4  mt-2" *ngFor="let x of sh">
+                      <div class="col-md-4  mt-2" *ngFor="let x of rel2">
                           <div class="sn-img">
                               <img src="{{x.image}}" />
                               <div class="sn-title">
-                                  <a href="">{{x.head}}</a>
+                                  <a (click)="gotorel('rel1',x.head)">{{x.head}}</a>
                               </div>
                           </div>
                       </div>

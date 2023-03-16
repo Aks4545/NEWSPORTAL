@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { carouseldata, database,malayalam,hindi,tamil,telungu,sports,tech, international, entertainment, business,homeCard, singleho ,singlehome,singlepage,singleh,h1} from 'src/assets/data/data';
+import { carouseldata, database,malayalam,hindi,tamil,telungu,sports,tech, international, entertainment, business,homeCard, singleho ,singlehome,singlepage,singleh,h1,singlerel1,singlerel2} from 'src/assets/data/data';
 import { Router } from '@angular/router';
 import { Token } from '@angular/compiler';
 @Injectable({
@@ -63,4 +63,11 @@ getsingleh(){
 geth1(){
 return h1
 }
+getsinglerel1(){
+return singlerel1
+}
+getsinglerel2(){
+  return singlerel2
+  }
+
 }
