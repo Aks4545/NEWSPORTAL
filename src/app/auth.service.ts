@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
-import { AngularFireAuth  } from '@angular/fire/compat/auth'
+import { AngularFireAuth  } from '@angular/fire/compat/auth';
+import { addDoc, collection, Firestore ,collectionData} from '@angular/fire/firestore';
+import { DocumentReference, getFirestore } from '@firebase/firestore';
+
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -7,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
-  constructor( private fireauth:AngularFireAuth,private router:Router ) { }
+  constructor( private fireauth:AngularFireAuth,private router:Router,private firestore:Firestore ) { }
 
 
 isLogged(){
@@ -57,6 +60,15 @@ alert(err.message);
 })
 }
 
+
+
+insertData(docRef:any,data:any){
+  addDoc(docRef,data)
+  .then(()=>{alert("sucessfull")})
+
+  .catch((err) => alert(err))
+
+}
 
 
 }

@@ -30,7 +30,8 @@ if(this.password==''){
 alert('please enter password');
 return;
 }
-if(this.username==''){
+if(
+  this.username==''){
   alert('please enter username');
   return;
   }
@@ -43,9 +44,7 @@ this.email='';
 this.password='';
 this.username='';
 this.phone='';
-
-
- }
+}
 gotologin(){
 this.router.navigate(['login'])
 }
