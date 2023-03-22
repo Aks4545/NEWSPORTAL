@@ -108,6 +108,8 @@ else if(lang==='rel2'){
   this.router.navigate(['/singleHome'])
 }
 
+
+
 gotorel(lang:any,head:any ){
   localStorage.setItem('lang',lang)
   localStorage.setItem('head',head)
