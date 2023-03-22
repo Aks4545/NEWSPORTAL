@@ -16,6 +16,7 @@ import { TechComponent } from './SubPages/tech/tech.component';
 import { TelunguComponent } from './SubPages/telungu/telungu.component';
 import { SingleHomeComponent } from './pages/single-home/single-home.component';
 
+
 const routes: Routes = [
   {
     path:'',
@@ -83,6 +84,7 @@ const routes: Routes = [
       path:'singleHome',
       component:SingleHomeComponent
     },
+
 
   ]
 

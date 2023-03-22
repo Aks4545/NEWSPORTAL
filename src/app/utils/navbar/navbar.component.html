@@ -43,9 +43,9 @@
                   <a routerLink="international" class="nav-item nav-link">International</a>
 
                   <div class="nav-item dropdown">
-                      <a  class="nav-link dropdown-toggle" data-toggle="dropdown">Language</a>
+                      <a  class="nav-link dropdown-toggle" data-toggle="dropdown" *ngIf="auth.isLogged()">Language</a>
                       <div class="dropdown-menu">
-                          <a routerLink="hindi" class="dropdown-item">Hindi</a>
+                          <a routerLink="hindi" class="dropdown-item" >Hindi</a>
                           <a routerLink="malayalam" class="dropdown-item"> Malayalam</a>
                           <a routerLink="tamil" class="dropdown-item">Tamil</a>
                           <a routerLink="telungu" class="dropdown-item"> Telungu</a>
