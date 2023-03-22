@@ -70,6 +70,14 @@ insertData(docRef:any,data:any){
 
 }
 
+insertComment(docRef:any,cmts:any){
+  addDoc(docRef,cmts)
+  .then(()=>{alert("sucessfull")})
+
+  .catch((err) => alert(err))
+
+}
+
 
 }
 

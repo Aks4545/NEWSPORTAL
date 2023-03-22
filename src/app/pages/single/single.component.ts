@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Firestore,collection } from '@angular/fire/firestore';
+import { AuthService } from 'src/app/auth.service';
 import { NewsService } from 'src/app/news.service';
 @Component({
   selector: 'app-single',
@@ -12,7 +14,9 @@ export class SingleComponent {
   home1:any
 sh:any
 rel2:any
-  constructor(private x:NewsService,private router:Router){}
+comments:string='';
+  constructor(private x:NewsService,private router:Router,public auth:AuthService,private fire:Firestore ){}
+
 
 
 
@@ -132,4 +136,16 @@ gotoent(){
 gotobus(){
   this.router.navigate(['/business'])
 }
+
+
+cmt(){
+  const cmts = {
+    comments:this.comments,
+  }
+  console.log(cmts);
+  const docRef = collection(this.fire,"contactdata")
+  this.auth.insertData(docRef,cmts)
+  this.comments='';
+}
+
 }
